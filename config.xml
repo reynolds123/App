@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.phonegap.example"
+    version   = "1.0.0">
+
+<name>Bolton Area Divers</name>
+
+<description>
+This is a Bolton Area Divers App.
+</description>
+
+<author href="https://boltonareadivers.co.uk" email="you@example.com">
+Ian Reynolds
+</author>
+
+<icon src="Icons/Android/mdpi" gap:platform="android" gap:density="mdpi" />
+<icon src="Icons/Android/hdpi" gap:platform="android" gap:density="hdpi" />
+<icon src="Icons/Android/xhdpi" gap:platform="android" gap:density="xhdpi" />
+<icon src="Icons/Android/xxhdpi" gap:platform="android" gap:density="xxhdpi" />
+
+<preference name="permissions" value="none"/>
+</widget>

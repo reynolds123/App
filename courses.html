@@ -1,0 +1,332 @@
+<!DOCTYPE html> 
+<html><!-- InstanceBegin template="/Templates/AppTemp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="Head" -->
+<title>jQuery Mobile Web App</title>
+
+<!-- InstanceEndEditable -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/jquery-mobile/jquery.mobile-1.4.5.css">
+<script src="/jQueryAssets/jquery-1.8.3.min.js"></script>
+<script src="/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+</head> 
+<style>
+.ui-listview>.ui-li-static{
+	padding-top:0;
+	padding-bottom:0;	
+}
+#recmenu .ui-btn{
+	padding-left:4em;	
+}
+#mainmenu{
+	background-image:url(App/graphics/menuback.jpg);
+	background-size:contain;	
+}
+
+#mainmenu h2{
+	padding:0;
+	margin:0;
+	text-align:center;	
+}
+    </style>
+<body>
+
+<div data-role="page">
+
+  <!--HEADER-->
+  <div data-role="header" data-position="fixed">
+    <h2>Header</h2>
+    <a href="#mainmenu" class="ui-btn ui-corner-all ui-btn-inline ui-mini ui-btn-icon-right  footer-button-right ui-icon-bars">Menu</a> 
+    </div>
+  <!-- MENU PANNEL-->
+  <div data-role="panel" id="mainmenu" data-display="overlay">
+    <h2>Main Menu</h2>
+    <div data-role="collapsibleset"  data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" >
+      <div data-role="collapsible" data-inset="false">
+        <h2>Courses</h2>
+        <ul data-role="listview">
+          <li><a href="#">Kids</a></li>
+          <li><a href="courses/Rec/recGeneral.html">Recreational</a></li>
+          <li><a href="#">Technical</a></li>
+          <li><a href="#">Professional</a></li>
+          <li><a href="#">First Aid</a></li>
+        </ul>
+      </div>
+      <!-- /collapsible -->
+      <div data-role="collapsible" data-inset="false">
+        <h2>Club</h2>
+        <ul data-role="listview">
+          <li><a href="trips.html" >Trips</a></li>
+          <li><a href="#" >Newsletters</a></li>
+          <li><a href="#" >Become a member</a></li>
+        </ul>
+      </div>
+      <!-- /collapsible -->
+      <div data-role="collapsible" data-inset="false">
+        <h2>Shop</h2>
+        <ul data-role="listview">
+          <li><a href="App/ShopPages/equipment.php"> Equipment Hire</a></li>
+          <li><a href="App/ShopPages/servicing.php"> Equipment Servicing</a></li>
+          <li><a href="App/ShopPages/repairs.php"> Equipment Repairs</a></li>
+          <li> <a href="App/ShopPages/air.php">Air &amp; Nitrox Fills</a></li>
+          <li><a href="/shop/shop.html"> Online Shop</a></li>
+        </ul>
+      </div>
+      <!-- /collapsible -->
+      <div data-role="collapsible">
+        <h2>About</h2>
+        <ul data-role="listview">
+          <li><a href="#">History</a></li>
+          <li><a href="about/staff.html">Staff</a></li>
+        </ul>
+      </div>
+      <!-- /collapsible -->
+    </div>
+    <!-- /collapsible set -->
+  </div>
+  <!-- /panel -->
+  <!--CONTENT--><div data-role="content">
+  <!-- InstanceBeginEditable name="Content" -->
+  <style>
+  .course_box{
+	 padding-top:8px; 
+	 padding-bottom:8px; 
+	 vertical-align:central; 
+	 
+	 margin-right:3px; 
+	 margin-left:3px;  
+	 margin-bottom:5px;
+	   border:3px ridge black;
+	   border-radius:10px;
+  }
+  .course_icon{
+	  height:50px; 
+	  width:50px;
+	  background-color:red;
+	  margin-left:5px; 
+	  float:left;
+	  vertical-align:central;
+  }
+  .course_icon h2{
+	  margin:auto;
+	  padding:0;
+	
+	  text-align:center;
+  }
+ 
+ .course_box h4, .course_box p {
+	margin-top:5px;
+	margin-bottom:0;
+	margin-left:70px; 
+	 
+ }
+ 
+  a{
+	  text-decoration:none;  
+  }
+  /* unvisited link */
+a:link {
+    color: black;
+}
+
+/* visited link */
+a:visited {
+	color:black;
+}
+
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+/* selected link */
+a:active {
+    color: black;
+}
+  
+  </style>
+  
+  <h2>Upcoming Trips</h2>
+
+ <script type="text/javascript">
+
+$(document).ready(function(){
+	if (true){ // if in need of update 
+			
+	  $.getJSON('http://www.i-reynolds.co.uk/AppPHP/getcourselist.php?callback=?','firstname=1',function(res){
+	  localStorage.setItem("course", JSON.stringify(res));
+	  displaycourse();
+	  
+	  }); // end getJSON
+	}	
+	else // if not in need of update
+	{displaycourse();}
+	
+}); // (end document).ready		  
+
+function displaycourse(){
+var month="";
+  course=localStorage.getItem("course");
+  var courseJSON=JSON.parse(course);
+  var month="";
+	$.each( courseJSON, function(i, n) {
+	var course = courseJSON[i];
+		  if (course.month!=month) // display month if dufferent from previous trip
+		  {
+			 $("div[data-role='content']").append('<h4>'+course.month+'</h4>');
+			  month=course.month;  
+		  }
+	output= '<a href="coursedetail.html"><div class="course_box">';
+	output+='<div class="course_icon">';
+	output+='<h2>'+course.day+'</h2>';
+	output+='</div>';
+	//output+='<h4>A '+trip.tripsDays+' day '+trip.tripType+' to '+trip.location+'= hjghfjmgh jyth fhg hk ghdfk dfhk jh fjh j </h4>';
+	output+='<p>2 dives cost £32</p>';
+	output+='</div></a>';
+	$("div[data-role='content']").append(output); 	  
+	}); // end each	
+}
+		  
+</script>
+
+
+  
+<script type="text/javascript">
+
+          
+  
+  
+/*$(document).ready(function(){
+  
+$.getJSON('http://www.i-reynolds.co.uk/AppPHP/gettriplist.php?callback=?','firstname=1',function(res){
+var month="";
+// loop around to display all dives  
+
+	if ( res.items ) {
+		$.each( res.items, function(i, n) {
+		var item = res.items[i]; 
+			if (res.month!=month)
+			{output='<h4>'+res.month+'</h4>';
+			month=res.month;
+			} // end if
+		
+		output+=' <a href="tripdetail.html"><div class="trip_box">'; 
+		output+='<div class="trip_icon">';
+		output+='<h2>'+returnDay(res.day)+'</h2></div>';
+		output+='<h4>A '+res.tripsDays+' day '+res.tripType+' to '+res.Location+'</h4>';
+		output+='<p>2 dives cost '+returnCost(res.tripsCost)+'</p></div></a>';
+		$("div[data-role='content']").append(output);
+		
+		}); // end each
+	} // end if
+
+}); // end getJSON
+}); // end (document).ready
+ 
+function returnDay(origDay){
+	var DayOut;
+	switch (origDay) {
+    case 1:
+	case 21:
+	case 31:
+        DayOut=origDay+"st";
+        break;
+    case 2:
+	case 22:
+        DayOut=origDay+"nd";
+        break;
+    case 3:
+	case 23:
+        DayOut=origDay+"rd";
+        break;
+  default:
+       DayOut=origDay+"th";
+}	
+return DayOut;
+}
+
+function returnCost(origCost){	
+var cost;
+if (origCost==0)
+{cost="FREE (entrance fee only)";}
+ else {cost="£ "+origCost;}	
+return cost;	
+}
+
+function returnMonth(origMonth){
+var month;
+	switch (origDay) {
+    case 1:
+	month="January";
+	  break;
+	case 2:
+	month="February"
+	  break;
+	case 3:
+        month="March"
+	  break;
+	  case 4:
+        month="April"
+	  break;
+	  case 5:
+        month="May"
+	  break;
+	  case 6:
+        month="June"
+	  break;
+	  case 7:
+        month="July"
+	  break;
+	  case 8:
+        month="August"
+	  break;
+	  case 9:
+        month="September"
+	  break;
+	  case 10:
+        month="October"
+	  break;
+	  case 11:
+        month="November"
+	  break;
+	  case 12:
+        month="December"
+	  break;
+}
+
+
+return month
+}*/
+
+
+</script>
+
+  
+  
+  <!-- InstanceEndEditable -->
+  </div>
+  <!--FOOTER-->
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="">Shop</a></li>
+        <li><a href="courses.html">Photos</a></li>
+        <li><a href="/courses.html">Courses</a></li>
+        <li><a href="trips.html" >Trips</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--POP UPS-->
+<!-- InstanceBeginEditable name="Pop Ups" -->
+
+
+
+
+
+<!-- InstanceEndEditable -->
+</div>
+
+</body>
+<!-- InstanceEnd --></html>

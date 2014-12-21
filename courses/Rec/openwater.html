@@ -1,0 +1,151 @@
+<!DOCTYPE html> 
+<html><!-- InstanceBegin template="/Templates/AppTemp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="Head" -->
+<title>jQuery Mobile Web App</title>
+
+<!-- InstanceEndEditable -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/jquery-mobile/jquery.mobile-1.4.5.css">
+<script src="/jQueryAssets/jquery-1.8.3.min.js"></script>
+<script src="/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+</head> 
+<style>
+.ui-listview>.ui-li-static{
+	padding-top:0;
+	padding-bottom:0;	
+}
+#recmenu .ui-btn{
+	padding-left:4em;	
+}
+#mainmenu{
+	background-image:url(../App/graphics/menuback.jpg);
+	background-size:contain;	
+}
+
+#mainmenu h2{
+	padding:0;
+	margin:0;
+	text-align:center;	
+}
+    </style>
+<body>
+
+<div data-role="page">
+
+  <!--HEADER-->
+  <div data-role="header" data-position="fixed">
+    <h2>Header</h2>
+    <a href="#mainmenu" class="ui-btn ui-corner-all ui-btn-inline ui-mini ui-btn-icon-right  footer-button-right ui-icon-bars">Menu</a> 
+    </div>
+  <!-- MENU PANNEL-->
+  <div data-role="panel" id="mainmenu" data-display="overlay">
+    <h2>Main Menu</h2>
+    <div data-role="collapsibleset"  data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" >
+      <div data-role="collapsible" data-inset="false">
+        <h2>Courses</h2>
+        <ul data-role="listview">
+          <li><a href="#">Kids</a></li>
+          <li><a href="#">Recreational</a></li>
+          <li><a href="#">Technical</a></li>
+          <li><a href="#">Professional</a></li>
+          <li><a href="#">First Aid</a></li>
+        </ul>
+      </div>
+      <!-- /collapsible -->
+      <div data-role="collapsible" data-inset="false">
+        <h2>Club</h2>
+        <ul data-role="listview">
+          <li><a href="#" >Trips</a></li>
+          <li><a href="#" >Newsletters</a></li>
+          <li><a href="#" >Become a member</a></li>
+        </ul>
+      </div>
+      <!-- /collapsible -->
+      <div data-role="collapsible" data-inset="false">
+        <h2>Shop</h2>
+        <ul data-role="listview">
+          <li><a href="../App/ShopPages/equipment.php"> Equipment Hire</a></li>
+          <li><a href="../App/ShopPages/servicing.php"> Equipment Servicing</a></li>
+          <li><a href="../App/ShopPages/repairs.php"> Equipment Repairs</a></li>
+          <li> <a href="../App/ShopPages/air.php">Air &amp; Nitrox Fills</a></li>
+          <li><a href="/shop/shop.html"> Online Shop</a></li>
+        </ul>
+      </div>
+      <!-- /collapsible -->
+      <div data-role="collapsible">
+        <h2>About</h2>
+        <ul data-role="listview">
+          <li><a href="#">History</a></li>
+          <li><a href="../about/staff.html">Staff</a></li>
+        </ul>
+      </div>
+      <!-- /collapsible -->
+    </div>
+    <!-- /collapsible set -->
+  </div>
+  <!-- /panel -->
+  <!--CONTENT--><div data-role="content">
+  <!-- InstanceBeginEditable name="Content" -->
+  
+  <h1> PADI OPEN WATER DIVER </h1>
+      <p>Now is the time to dive into the PADI Open Water Diver course, the most popular dive program in the world! This is your ticket to a lifetime of intense adventure with PADI, the dive company that sets the standards in the global diving community.</p>
+      <p>As a certified PADI Open Water Diver, the most widely recognized and respected rating in the world; you have the freedom to dive with a buddy independent of a professional.</p>
+      <p>Throughout the course, you’ll learn the fundamentals of scuba diving, including safe diving practices, dive equipment and techniques. You earn this rating by completing five pool dives and knowledge development sessions and by making four open water dives.</p>
+     
+      <h3>What You Learn </h3>
+      <p>The PADI Open Water Diver course consists of three main phases:</p>
+      <ul>
+        <li>Knowledge Development to understand basic principles of scuba diving (, home study or in a B.A.D. classroom)</li>
+        <li>Confined Water Dives to learn basic scuba skills (Turton Pool)</li>
+        <li>Open Water Dives to review your skills and explore! (Capernwray dive centre)</li>
+      </ul>
+      <h3>How Long Will it Take</h3>
+      <p>The course runs over 4 Saturdays or you can do the theory online if you wish. Don’t worry if you get stuck on any part of the course. As long as you put the effort in, we’ll let you come back until you pass.</p>
+      <h3>Prerequisites</h3>
+      <ul>
+        <li>Virtually anyone who is in good health, reasonably fit, and comfortable in the water</li>
+        <li>To take Junior Open Water Course you must be at least 10 years old </li>
+        <li>To take Open Water Course you must be at least 14 years old </li>
+      </ul>
+      <h3>What’s Included</h3>
+      <ul>
+        <li>Equipment Hire</li>
+        <li>Supervision by a PADI professional instructor </li>
+        <li>All Course Materials</li>
+        <li>Air Fills</li>
+        <li>Certification Card</li>
+      </ul>
+      <h3>Your Next Adventure</h3>
+      <p>Once you complete a Open Water Diver qualification, you’ll want to check out: <a href="Advanced.php">The PADI Advanced Open Water Course</a>.</p>
+  
+
+  
+  
+  <!-- InstanceEndEditable -->
+  </div>
+  <!--FOOTER-->
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="">Shop</a></li>
+        <li><a href="../courses.html">Photos</a></li>
+        <li><a href="/courses.html">Courses</a></li>
+        <li><a href="" >Trips</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--POP UPS-->
+<!-- InstanceBeginEditable name="Pop Ups" -->
+
+
+
+
+
+<!-- InstanceEndEditable -->
+</div>
+
+</body>
+<!-- InstanceEnd --></html>

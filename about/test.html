@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<script type="text/javascript">
+	$.fn.storeImg=function(cb){
+		return this.one('load',function(){
+			var img=this
+			$("<canvas>")
+				.attr({width:this.width,height:this.height})
+				.each(function(){
+					this.getContext("2d").drawImage(img, 0, 0)
+					cb.call(img,this.toDataURL("image/png"))
+				})
+		})
+	}
+	$(function(){
+		$('img[id]').storeImg(function(url){
+			localStorage[this.id]=this.src=url
+			console.log(this.id+" stored")
+		})
+	})
+	</script>
+	<title>local store images</title>
+</head>
+<body>
+<img src="efr.jpg" id="default"/>
+<img src="hkj.jpg" id="jake" />
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html> 
+<html><!-- InstanceBegin template="/Templates/AppTemp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="Head" -->
+<title>jQuery Mobile Web App</title>
+
+<!-- InstanceEndEditable -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/jquery-mobile/jquery.mobile-1.4.5.css">
+<script src="/jQueryAssets/jquery-1.8.3.min.js"></script>
+<script src="/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+</head> 
+<style>
+.ui-listview>.ui-li-static{
+	padding-top:0;
+	padding-bottom:0;	
+}
+#recmenu .ui-btn{
+	padding-left:4em;	
+}
+#mainmenu{
+	background-image:url(App/graphics/menuback.jpg);
+	background-size:contain;	
+}
+
+#mainmenu h2{
+	padding:0;
+	margin:0;
+	text-align:center;	
+}
+    </style>
+<body>
+
+<div data-role="page">
+
+  <!--HEADER-->
+  <div data-role="header" data-position="fixed">
+    <h2>Header</h2>
+    <a href="#mainmenu" class="ui-btn ui-corner-all ui-btn-inline ui-mini ui-btn-icon-right  footer-button-right ui-icon-bars">Menu</a> 
+    </div>
+  <!-- MENU PANNEL-->
+  <div data-role="panel" id="mainmenu" data-display="overlay">
+    <h2>Main Menu</h2>
+    <div data-role="collapsibleset"  data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" >
+      <div data-role="collapsible" data-inset="false">
+        <h2>Courses</h2>
+        <ul data-role="listview">
+          <li><a href="#">Kids</a></li>
+          <li><a href="courses/Rec/recGeneral.html">Recreational</a></li>
+          <li><a href="#">Technical</a></li>
+          <li><a href="#">Professional</a></li>
+          <li><a href="#">First Aid</a></li>
+        </ul>
+      </div>
+      <!-- /collapsible -->
+      <div data-role="collapsible" data-inset="false">
+        <h2>Club</h2>
+        <ul data-role="listview">
+          <li><a href="trips.html" >Trips</a></li>
+          <li><a href="#" >Newsletters</a></li>
+          <li><a href="#" >Become a member</a></li>
+        </ul>
+      </div>
+      <!-- /collapsible -->
+      <div data-role="collapsible" data-inset="false">
+        <h2>Shop</h2>
+        <ul data-role="listview">
+          <li><a href="App/ShopPages/equipment.php"> Equipment Hire</a></li>
+          <li><a href="App/ShopPages/servicing.php"> Equipment Servicing</a></li>
+          <li><a href="App/ShopPages/repairs.php"> Equipment Repairs</a></li>
+          <li> <a href="App/ShopPages/air.php">Air &amp; Nitrox Fills</a></li>
+          <li><a href="/shop/shop.html"> Online Shop</a></li>
+        </ul>
+      </div>
+      <!-- /collapsible -->
+      <div data-role="collapsible">
+        <h2>About</h2>
+        <ul data-role="listview">
+          <li><a href="#">History</a></li>
+          <li><a href="about/staff.html">Staff</a></li>
+        </ul>
+      </div>
+      <!-- /collapsible -->
+    </div>
+    <!-- /collapsible set -->
+  </div>
+  <!-- /panel -->
+  <!--CONTENT--><div data-role="content">
+  <!-- InstanceBeginEditable name="Content" -->
+ <div style="margin-left:7%"> 
+<a href="#popupParis" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="graphics/DSCF0661.jpg" alt="Paris, France" style="width:45%"></a>
+<a href="#popupParis2" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="graphics/DSCF0661.jpg" alt="Paris, France" style="width:45%"></a>
+<a href="#popupParis2" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="graphics/DSCF0661.jpg" alt="Paris, France" style="width:30%"></a>
+<a href="#popupParis2" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="graphics/DSCF0661.jpg" alt="Paris, France" style="width:30%"></a>
+</div>
+<div data-role="popup" id="popupParis" data-overlay-theme="b" data-theme="b" data-corners="false">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="graphics/DSCF0662.jpg" style="max-height:512px;" alt="Paris, France">
+</div>
+<div data-role="popup" id="popupParis2" data-overlay-theme="b" data-theme="b" data-corners="false">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="graphics/DSCF1537.jpg" style="max-height:512px;" alt="Paris, France">
+</div>
+
+
+  
+  
+  <!-- InstanceEndEditable -->
+  </div>
+  <!--FOOTER-->
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="">Shop</a></li>
+        <li><a href="courses.html">Photos</a></li>
+        <li><a href="/courses.html">Courses</a></li>
+        <li><a href="trips.html" >Trips</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--POP UPS-->
+<!-- InstanceBeginEditable name="Pop Ups" -->
+
+
+
+
+
+<!-- InstanceEndEditable -->
+</div>
+
+</body>
+<!-- InstanceEnd --></html>

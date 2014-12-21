@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Web App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head> 
+<style>
+.ui-listview>.ui-li-static{
+	padding-top:0;
+	padding-bottom:0;	
+}
+#recmenu .ui-btn{
+	padding-left:4em;	
+}
+#mainmenu{
+	background-image:url(graphics/menuback.jpg);
+	background-size:contain;	
+}
+
+#mainmenu h2{
+	padding:0;
+	margin:0;
+	text-align:center;	
+}
+    </style>
+<body> 
+
+<div data-role="page" 
+
+id="page"
+
+>
+
+<!--HEADER-->
+
+    <div data-role="header">
+        <h2>Header</h2>
+        <a href="#mainmenu" class="ui-btn ui-corner-all ui-btn-inline ui-mini ui-btn-icon-right  footer-button-right ui-icon-bars">Menu</a>
+    </div>
+
+	<!-- MENU PANNEL-->
+
+    <div data-role="panel" id="mainmenu" data-display="overlay">
+    <h2>Main Menu</h2>
+        <div data-role="collapsibleset"  data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" >
+            <div data-role="collapsible" data-inset="false"><h2>Courses</h2>
+                <ul data-role="listview">
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Recreational</a></li>
+                    <li><a href="#">Technical</a></li>
+                    <li><a href="#">Professional</a></li>
+                    <li><a href="#">First Aid</a></li>
+                </ul>
+            </div><!-- /collapsible -->
+            
+            <div data-role="collapsible" data-inset="false"><h2>Club</h2>
+                <ul data-role="listview">
+                    <li><a href="#" data-rel="dialog">Trips</a></li>
+                    <li><a href="#" data-rel="dialog">Newsletters</a></li>
+                    <li><a href="#" data-rel="dialog">Become a member</a></li>
+                </ul>
+            </div><!-- /collapsible -->
+            
+            <div data-role="collapsible" data-inset="false"><h2>Shop</h2>
+                <ul data-role="listview">
+                    <li><a href="ShopPages/equipment.php"> Equipment Hire</a></li>
+                    <li><a href="ShopPages/servicing.php"> Equipment Servicing</a></li>
+                    <li><a href="ShopPages/repairs.php"> Equipment Repairs</a></li>
+                    <li> <a href="ShopPages/air.php">Air &amp; Nitrox Fills</a></li>
+                    <li><a href="http://shop.boltonareadivers.co.uk/"> Online Shop</a></li>
+                </ul>
+            </div><!-- /collapsible -->
+            
+            <div data-role="collapsible" data-inset="false"><h2>About</h2>
+                <ul data-role="listview">
+                    <li><a href="#" data-rel="dialog">History</a></li>
+                    <li><a href="#" data-rel="dialog">Staff</a></li>
+                </ul>
+            </div><!-- /collapsible -->
+            
+        </div><!-- /collapsible set -->
+    </div><!-- /panel -->
+    <!--CONTENT-->
+
+
+
+
+
+	
+
+
+<!--FOOTER-->
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Photos</a></li>
+                <li><a href="#">Upcoming Courses</a></li>
+                <li><a href="#" >Upcoming Trips</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<!--POP UPS-->
+
+
+</div>
+
+</body>
+</html>
