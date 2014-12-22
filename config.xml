@@ -16,12 +16,12 @@ Ian Reynolds
 <preference name="orientation" value="portrait" />
 
 
-<gap:splash src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="ldpi" />
-<gap:splash src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="mdpi" />
-<gap:splash src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="hdpi" />
-<gap:splash src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="xhdpi" />
-<gap:splash src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="fr-xhdpi" />
-<gap:splash src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="port-xxhdpi" />
+<gap:splash src="Splash/Android/splash.png" gap:platform="android" gap:qualifier="ldpi" />
+<gap:splash src="Splash/Android/splash.png" gap:platform="android" gap:qualifier="mdpi" />
+<gap:splash src="Splash/Android/splash.png" gap:platform="android" gap:qualifier="hdpi" />
+<gap:splash src="Splash/Android/splash.png" gap:platform="android" gap:qualifier="xhdpi" />
+<gap:splash src="Splash/Android/splash.png" gap:platform="android" gap:qualifier="fr-xhdpi" />
+<gap:splash src="Splash/Android/splash.png" gap:platform="android" gap:qualifier="port-xxhdpi" />
 
 
 
