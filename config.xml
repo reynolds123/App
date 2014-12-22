@@ -15,12 +15,16 @@ Ian Reynolds
 </author>
 <preference name="orientation" value="portrait" />
 
-<icon src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="ldpi" />
-<icon src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="mdpi" />
-<icon src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="hdpi" />
-<icon src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="xhdpi" />
-<icon src="Splash/Android/splash.jpg"  gap:platform="android" gap:qualifier="xxhdpi" />
-<icon src="Splash/Android/splash.jpg"  gap:platform="android" gap:qualifier="fr-xxhdpi" />
+
+<gap:splash src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="ldpi" />
+<gap:splash src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="mdpi" />
+<gap:splash src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="hdpi" />
+<gap:splash src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="xhdpi" />
+<gap:splash src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="fr-xhdpi" />
+<gap:splash src="Splash/Android/splash.jpg" gap:platform="android" gap:qualifier="port-xxhdpi" />
+
+
+
 
 <icon src="Icons/Android/mdpi.jpg" gap:platform="android" gap:density="mdpi" />
 <icon src="Icons/Android/hdpi.jpg" gap:platform="android" gap:density="hdpi" />
