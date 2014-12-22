@@ -156,6 +156,7 @@ $(document).ready(function(){
 	
 	  $.getJSON('http://www.i-reynolds.co.uk/AppPHP/gettriplist.php?callback=?','firstname=1',function(res){
 	  localStorage.setItem("trip", JSON.stringify(res));
+	  alert("a");
 	  displaytrips();
 	  
 	  }); // end getJSON
@@ -181,7 +182,7 @@ var month="";
 	output+='<div class="trip_icon">';
 	output+='<h2>'+trip.day+'</h2>';
 	output+='</div>';
-	output+='<h4>A '+trip.tripsDays+' day '+trip.tripType+' to '+trip.location+'= hjghfjmgh jyth fhg hk ghdfk dfhk jh fjh j </h4>';
+	output+='<h4>A '+trip.tripsDays+' day '+trip.tripType+' to '+trip.Location+'</h4><h5>'+trip.tripsText+'</h5>';
 	output+='<p>2 dives cost £32</p>';
 	output+='</div></a>';
 	$("div[data-role='content']").append(output); 	  
@@ -202,9 +203,9 @@ var month="";
   <div data-role="footer" data-position="fixed">
     <div data-role="navbar">
       <ul>
-        <li><a href="">Shop</a></li>
-        <li><a href="courses.html">Photos</a></li>
-        <li><a href="/courses.html">Courses</a></li>
+        <li><a href="www.shop.boltonareadivers.com">Shop</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="courses.html">Courses</a></li>
         <li><a href="trips.html" >Trips</a></li>
       </ul>
     </div>
